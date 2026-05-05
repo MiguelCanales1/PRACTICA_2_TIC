@@ -1,2 +1,2 @@
 # PRACTICA_2_TIC
-Hola
+Hola mundo
