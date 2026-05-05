@@ -1,0 +1,21 @@
+name: Run Container Example
+
+on:
+  push:
+    branches: [ "main", "feature_a" ]
+
+jobs:
+  run-container:
+    runs-on: ubuntu-latest
+
+    container:
+      image: node:18
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Run command inside container
+        run: |
+          echo "Hola desde el contenedor 🚀"
+          node -v
